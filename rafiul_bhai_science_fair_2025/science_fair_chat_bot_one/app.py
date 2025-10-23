@@ -14,7 +14,7 @@ from googletrans import Translator
 from flask_caching import Cache
 import threading
 import bleach
-import backoff  # Add this: pip install backoff
+import backoff  
 
 load_dotenv()
 
