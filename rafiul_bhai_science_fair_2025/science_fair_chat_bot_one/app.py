@@ -4,7 +4,6 @@ secondary_answer = "none_for_now"
 from flask import Flask, request, Response, send_file, render_template, jsonify
 import os
 import uuid
-import json
 import time
 import glob
 import logging
@@ -12,7 +11,6 @@ from gtts import gTTS
 from google import genai  # Corrected import (assuming google-generativeai)
 from dotenv import load_dotenv
 from googletrans import Translator
-from fuzzywuzzy import fuzz
 from flask_caching import Cache
 import threading
 import bleach
