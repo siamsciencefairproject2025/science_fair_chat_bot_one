@@ -39,18 +39,8 @@ translator = Translator()
 
 # Predefined response translations (extended with soil moisture)
 RESPONSE_TRANSLATIONS = {
-    "লাইটটি চালু হয়েছে": "The light has been turned on",
-    "লাইটটি বন্ধ হয়েছে": "The light has been turned off",
-    "বীজ বপন ব্যবস্থা চালু হয়েছে": "The seed sowing system has been turned on",
-    "বীজ বপন ব্যবস্থা বন্ধ হয়েছে": "The seed sowing system has been turned off",
-    "কীটনাশক ব্যবস্থা চালু হয়েছে": "The fertilizer system has been turned on",
-    "কীটনাশক ব্যবস্থা বন্ধ হয়েছে": "The fertilizer system has been turned off",
-    "ওয়াটার পাম্প চালু হয়েছে": "The water pump has been turned on",
-    "ওয়াটার পাম্প বন্ধ হয়েছে": "The water pump has been turned off",
-    "পরিমাপ করা হচ্ছে... LCD প্যানেল দেখুন": "Measuring... Look at the LCD panel",
-    "বন্ধ করা হচ্ছে...":'Stopping....',
-    "রোভার শুরু হচ্ছে।":"Starting rover.",
-    "রোভার বন্ধ হচ্ছে।":"Stopping rover."
+    "আসসালামু আলাইকুম স্যার। আমি BMSC BOT। আমাদের বিজ্ঞান ও প্রযুক্তি মেলা ২০২৫ এ আপনাকে স্বাগতম।": "Assalamualakium sir. I am BMSC Bot. Welcome to our BMSC Science fair 2025.",
+    
 }
 
 SYSTEM_INSTRUCTION_BN = ""
@@ -209,18 +199,7 @@ def esp32_receive():
     # Key: command, Value: list of phrases (case-sensitive, but we'll lower() in checks)
     print(request.content_type)
     command_triggers = {
-        "light_on": ["লাইটটি চালু হয়েছে", "The light has been turned on", "Light has been turned ON"],
-        "light_off": ["লাইটটি বন্ধ হয়েছে", "The light has been turned off", "Light has been turned OFF"],
-        "seed_sow_on": ["বীজ বপন ব্যবস্থা চালু হয়েছে", "The seed sowing system has been turned on", "Seed sowing system has been turned ON"],
-        "seed_sow_off": ["বীজ বপন ব্যবস্থা বন্ধ হয়েছে", "The seed sowing system has been turned off", "Seed sowing system has been turned OFF"],
-        "fertilizer_on": ["কীটনাশক ব্যবস্থা চালু হয়েছে", "The fertilizer system has been turned on", "Fertilizer system has been turned ON"],
-        "fertilizer_off": ["কীটনাশক ব্যবস্থা বন্ধ হয়েছে", "The fertilizer system has been turned off", "Fertilizer system has been turned OFF"],
-        "water_pump_on": ["ওয়াটার পাম্প চালু হয়েছে", "The water pump has been turned on", "Water pump has been turned ON"],
-        "water_pump_off": ["ওয়াটার পাম্প বন্ধ হয়েছে", "The water pump has been turned off", "Water pump has been turned OFF"],
-        "start_measuring_soil_moisture": ["পরিমাপ করা হচ্ছে... LCD প্যানেল দেখুন", "Measuring... Look at the LCD panel", "MEASURING.... LOOK AT THE LCD PANEL"],
-        "stop_measuring_soil_moisture": ["বন্ধ করা হচ্ছে...","Stopping....","STOPPING...."],
-        "start_rover": ["রোভার শুরু হচ্ছে।","Starting rover.","STARTING ROVER."],
-        "stop_rover": ["রোভার বন্ধ হচ্ছে।","Stopping rover.","STOPPING ROVER."]
+        "hello bmsc bot": ["আসসালামু আলাইকুম স্যার। আমি BMSC BOT। আমাদের বিজ্ঞান ও প্রযুক্তি মেলা ২০২৫ এ আপনাকে স্বাগতম।","Assalamualakium sir. I am BMSC Bot. Welcome to our BMSC Science fair 2025.","Assalamualakium sir. I am BMSC Bot. Welcome to our BMSC Science fair 2025."]
     }
 
     # Check both primary and secondary answers for any matching phrase (case-insensitive)
