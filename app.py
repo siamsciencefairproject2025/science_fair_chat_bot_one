@@ -199,7 +199,7 @@ def esp32_receive():
     # Key: command, Value: list of phrases (case-sensitive, but we'll lower() in checks)
     print(request.content_type)
     command_triggers = {
-        "hello bmsc bot": ["আসসালামু আলাইকুম স্যার। আমি BMSC BOT। আমাদের বিজ্ঞান ও প্রযুক্তি মেলা ২০২৫ এ আপনাকে স্বাগতম।","Assalamualakium sir. I am BMSC Bot. Welcome to our BMSC Science fair 2025.","Assalamualakium sir. I am BMSC Bot. Welcome to our BMSC Science fair 2025."]
+        "robot start": ["আসসালামু আলাইকুম স্যার। আমি BMSC BOT। আমাদের বিজ্ঞান ও প্রযুক্তি মেলা ২০২৫ এ আপনাকে স্বাগতম।","Assalamualakium sir. I am BMSC Bot. Welcome to our BMSC Science fair 2025.","Assalamualakium sir. I am BMSC Bot. Welcome to our BMSC Science fair 2025."]
     }
 
     # Check both primary and secondary answers for any matching phrase (case-insensitive)
